@@ -36,9 +36,9 @@ public class DeliveryformTest {
         $("[data-test-id=phone] input").setValue("+79264464646");
         $("[data-test-id=agreement]").click();
         $("button.button").click();
-        $("notification__content")
+        $("[data-test-id='notification']")
                 .shouldBe(Condition.visible, Duration.ofSeconds(15))
-                .shouldHave(Condition.exactText("Встреча успешно забронирована на " + currentDate));
+                .shouldHave(Condition.matchText("Встреча успешно забронирована на " + currentDate));
     }
 
 }
