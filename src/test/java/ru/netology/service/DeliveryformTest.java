@@ -27,7 +27,7 @@ public class DeliveryformTest {
     @Test
     void shouldTestFormPositive() {
         $("[data-test-id=city] input").setValue("Мос");
-        $$("menu-item__control").find(text("Москва")).click();
+        $$(".menu-item__control").find(text("Москва")).click();
         String currentDate = generateDate(4, "dd.MM.yyyy");
         $("button.icon-button").click();
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
